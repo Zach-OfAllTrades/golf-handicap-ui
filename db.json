@@ -1,0 +1,386 @@
+{
+  "courses": [
+    {
+      "id": "52U92V5C",
+      "course_name": "Stillwater Golf & Country Club",
+      "display_name": "Stillwater",
+      "location": "St. Johns, FL"
+    },
+    {
+      "id": "25U92G5F",
+      "course_name": "Baker's Bay Golf & Ocean Club",
+      "display_name": "Baker's Bay",
+      "location": "Great Guana Cay, Bahamas"
+    },
+    {
+      "id": "67U92VNM",
+      "course_name": "Sanctuary Golf Club",
+      "display_name": "Sanctuary",
+      "location": "Waverly, GA"
+    },
+    {
+      "id": "NKCQKDNU",
+      "course_name": "Oak Marsh at Omni Amelia Island Resort",
+      "display_name": "Oak Marsh",
+      "location": "Fernandina Beach, FL"
+    },
+    {
+      "id": "II90IY7H",
+      "course_name": "Queen's Harbour Yacht & Country Club",
+      "display_name": "Queen's Harbour",
+      "location": "Jacksonville, FL"
+    },
+    {
+      "id": "4G69RJHD",
+      "course_name": "Ponte Vedra Inn & Club - Ocean Course",
+      "display_name": "PVIC - Ocean Course",
+      "location": "Ponte Vedra Beach, FL"
+    },
+    {
+      "id": "PN3IZ309",
+      "course_name": "Hidden Hills Colf Club",
+      "display_name": "Hidden Hills",
+      "location": "Jacksonville, FL"
+    },
+    {
+      "id": "4E9XW7ZL",
+      "course_name": "The Golf Club at South Hampton",
+      "display_name": "South Hampton",
+      "location": "St. Johns, FL"
+    },
+    {
+      "id": "1L6B4Q2R",
+      "course_name": "St. John's Golf & Country Club",
+      "display_name": "St. John's Golf & Country Club",
+      "location": "St. Johns, FL"
+    },
+    {
+      "id": "9M8D7P2Z",
+      "course_name": "Jacksonville Golf & Country Club",
+      "display_name": "Jacksonville Golf & Country Club",
+      "location": "Jacksonville, FL"
+    },
+    {
+      "id": "3Y7C1K8D",
+      "course_name": "Troon North Golf Club",
+      "display_name": "Troon North",
+      "location": "Scottsdale, AZ"
+    },
+    {
+      "id": "5G6F1U7V",
+      "course_name": "TPC Sawgrass, Dye's Valley Course",
+      "display_name": "Dye's Valley",
+      "location": "Ponte Vedra, FL"
+    },
+    {
+      "id": "2Q9H5X8I",
+      "course_name": "Slammer & Squire Golf Course",
+      "display_name": "Slammer & Squire",
+      "location": "St. Augustine, FL"
+    },
+    {
+      "id": "7A3P9K4E",
+      "course_name": "Windsor Parke Golf Club",
+      "display_name": "Windsor Parke",
+      "location": "Jacksonville, FL"
+    },
+    {
+      "id": "6O2U1Y8L",
+      "course_name": "Amelia River Golf Club",
+      "display_name": "Amelia River",
+      "location": "Amelia Island, FL"
+    },
+    {
+      "id": "4J8C2M1T",
+      "course_name": "TPC Sawgrass, Stadium Course",
+      "display_name": "TPC Sawgrass - Stadium",
+      "location": "Ponte Vedra, FL"
+    },
+    {
+      "id": "9P2F8L4K",
+      "course_name": "Whirlwind Golf Club at Wild Horse Pass, Devil's Claw Course",
+      "display_name": "Whirlwind - Devil's Claw",
+      "location": "Chandler, AZ"
+    },
+    {
+      "id": "7D2T9X6L",
+      "course_name": "The Founder's Club",
+      "display_name": "The Founder's Club",
+      "location": "Lakewood Ranch, FL"
+    },
+    {
+      "id": "5R8I1H6L",
+      "course_name": "Lakewood Ranch Golf & Country Club, King's Dunes Course",
+      "display_name": "King's Dunes",
+      "location": "Lakewood Ranch, FL"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "75L0HLJR",
+      "user_id": "MYOR91ZV",
+      "score": 89,
+      "tee_id": "BL017EBV",
+      "details_id": null,
+      "ags": 87,
+      "date": "2023-05-26"
+    },
+    {
+      "id": "T3IJQWTD",
+      "user_id": "MYOR91ZV",
+      "score": 85,
+      "tee_id": "BL017EBV",
+      "details_id": null,
+      "ags": 83,
+      "date": "2023-05-28"
+    },
+    {
+      "id": "O1FSOH39",
+      "user_id": "MYOR91ZV",
+      "score": 86,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 86,
+      "date": "2023-06-02"
+    },
+    {
+      "id": "A8C1X2NW",
+      "user_id": "MYOR91ZV",
+      "score": 83,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 82,
+      "date": "2023-06-09"
+    },
+    {
+      "id": "V69B5MXS",
+      "user_id": "MYOR91ZV",
+      "score": 79,
+      "tee_id": "KTKBU98S",
+      "details_id": null,
+      "ags": 79,
+      "date": "2023-06-11"
+    },
+    {
+      "id": "H46K47GO",
+      "user_id": "MYOR91ZV",
+      "score": 87,
+      "tee_id": "DORTN4F9",
+      "details_id": null,
+      "ags": 86,
+      "date": "2023-06-19"
+    },
+    {
+      "id": "2B3TCRRA",
+      "user_id": "MYOR91ZV",
+      "score": 88,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 87,
+      "date": "2023-06-21"
+    },
+    {
+      "id": "X902K3A6",
+      "user_id": "MYOR91ZV",
+      "score": 83,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 83,
+      "date": "2023-06-23"
+    },
+    {
+      "id": "JHWCTNKT",
+      "user_id": "MYOR91ZV",
+      "score": 86,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 86,
+      "date": "2023-07-09"
+    },
+    {
+      "id": "4FTLR84P",
+      "user_id": "MYOR91ZV",
+      "score": 82,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 82,
+      "date": "2023-08-12"
+    },
+    {
+      "id": "QCQU0SEL",
+      "user_id": "MYOR91ZV",
+      "score": 85,
+      "tee_id": "DORTN4F9",
+      "details_id": null,
+      "ags": 84,
+      "date": "2023-08-19"
+    },
+    {
+      "id": "LKN38DY7",
+      "user_id": "MYOR91ZV",
+      "score": 86,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 86,
+      "date": "2023-08-25"
+    },
+    {
+      "id": "6IKMGY83",
+      "user_id": "MYOR91ZV",
+      "score": 93,
+      "tee_id": "RQUJEJ4D",
+      "details_id": null,
+      "ags": 89,
+      "date": "2023-09-22"
+    },
+    {
+      "id": "SFHVFISP",
+      "user_id": "MYOR91ZV",
+      "score": 89,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 87,
+      "date": "2023-09-29"
+    },
+    {
+      "id": "EN45NT2L",
+      "user_id": "MYOR91ZV",
+      "score": 90,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 90,
+      "date": "2023-10-06"
+    },
+    {
+      "id": "ZL1EWEMH",
+      "user_id": "MYOR91ZV",
+      "score": 83,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 83,
+      "date": "2023-10-13"
+    },
+    {
+      "id": "UJYNUZW4",
+      "user_id": "MYOR91ZV",
+      "score": 85,
+      "tee_id": "YMO2MPY5",
+      "details_id": null,
+      "ags": 85,
+      "date": "2023-10-14"
+    },
+    {
+      "id": "GQVW3JG0",
+      "user_id": "MYOR91ZV",
+      "score": 80,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 80,
+      "date": "2023-10-29"
+    },
+    {
+      "id": "1OS5B4QM",
+      "user_id": "MYOR91ZV",
+      "score": 86,
+      "tee_id": "6JXA6ZLR",
+      "details_id": null,
+      "ags": 85,
+      "date": "2023-11-03"
+    },
+    {
+      "id": "NMPFJO0I",
+      "user_id": "MYOR91ZV",
+      "score": 91,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 91,
+      "date": "2023-12-08"
+    },
+    {
+      "id": "69L0HZJR",
+      "user_id": "MYOR91ZV",
+      "score": 89,
+      "tee_id": "00RI1GPZ",
+      "details_id": null,
+      "ags": 88,
+      "date": "2023-12-10"
+    }
+  ],
+  "tees": [
+    {
+      "id": "00RI1GPZ",
+      "course_id": "52U92V5C",
+      "tee_name": "Blue",
+      "rating": 69.8,
+      "slope": 122,
+      "par": 72,
+      "yardage": 6314
+    },
+    {
+      "id": "BL017EBV",
+      "course_id": "25U92G5F",
+      "tee_name": "II",
+      "rating": 71.6,
+      "slope": 131,
+      "par": 72,
+      "yardage": 6678
+    },
+    {
+      "id": "6JXA6ZLR",
+      "course_id": "4G69RJHD",
+      "tee_name": "Blue",
+      "rating": 71,
+      "slope": 123,
+      "par": 71,
+      "yardage": 6397
+    },
+    {
+      "id": "RQUJEJ4D",
+      "course_id": "II90IY7H",
+      "tee_name": "Gold",
+      "rating": 71.6,
+      "slope": 131,
+      "par": 72,
+      "yardage": 6621
+    },
+    {
+      "id": "DORTN4F9",
+      "course_id": "67U92VNM",
+      "tee_name": "Blue",
+      "rating": 71.4,
+      "slope": 129,
+      "par": 72,
+      "yardage": 6670
+    },
+    {
+      "id": "YMO2MPY5",
+      "course_id": "PN3IZ309",
+      "tee_name": "Blue",
+      "rating": 72.2,
+      "slope": 131,
+      "par": 72,
+      "yardage": 6623
+    },
+    {
+      "id": "KTKBU98S",
+      "course_id": "NKCQKDNU",
+      "tee_name": "Blue",
+      "rating": 69.8,
+      "slope": 124,
+      "par": 72,
+      "yardage": 6068
+    }
+  ],
+  "users": [
+    {
+      "id": "MYOR91ZV",
+      "first_name": "Zachary",
+      "last_name": "Rose",
+      "email": "zach.rose.1008@gmail.com",
+      "profile_pic": "link.com/pic",
+      "registration_date": "12/12/2023",
+      "username": "zach.rose",
+      "password": "dummyP@ssword"
+    }
+  ]
+}
