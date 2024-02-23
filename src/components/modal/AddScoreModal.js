@@ -11,15 +11,15 @@ import {
   Alert,
 } from "@mui/material";
 import React, { useState } from "react";
-import { useCourses } from "../../hooks/useCourses";
 import LocalDatePicker from "../DatePicker";
 import { saveRounds } from "../../services/RoundService";
 import { getUserId } from "../../temp_redux/reduxMock";
 import dayjs from "dayjs";
-import { STANDARD_DATE_FORMAT } from "../../utiles/rules";
+import { FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
+import { useFetch } from "../../hooks/useFetch";
 
 const AddScoreModal = ({ open, onClose }) => {
-  const { data, isLoading, isError } = useCourses();
+  const { data, isLoading, isError } = useFetch(FETCH_KEYS.COURSES);
   const [selectedCourse, setSelectedCourse] = useState();
   const [ags, setAgs] = useState();
   const [score, setScore] = useState();

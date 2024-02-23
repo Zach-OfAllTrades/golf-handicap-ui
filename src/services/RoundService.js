@@ -19,7 +19,7 @@ export const saveRounds = async (args) => {
 };
 
 export const getValidRounds = async (userId, startDate, endDate) => {
-  return await fetch(`http://localhost:5000/rounds/valid/${userId}`, {
+  return await fetch(`${ROUNDS_DATA_URL}/valid/${userId}`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -33,7 +33,7 @@ export const getValidRounds = async (userId, startDate, endDate) => {
 };
 
 export const getRounds = async (userId) => {
-  return await fetch(`http://localhost:5000/rounds/${userId}`, {
+  return await fetch(`${ROUNDS_DATA_URL}/${userId}`, {
     mode: "cors",
   }).then((response) => response.json());
 };

@@ -3,9 +3,13 @@ import React, { useState } from "react";
 import HandicapCard from "../components/dashboard/HandicapCard";
 import AddScoreModal from "../components/modal/AddScoreModal";
 import ScoresTable from "../components/dashboard/scores/ScoresTable";
+import { FETCH_KEYS } from "../utils/general";
+import { useFetch } from "../hooks/useFetch";
 
 const Dashboard = () => {
   const [addIsOpen, setAddIsOpen] = useState(false);
+  const { data, isLoading, isError } = useFetch(FETCH_KEYS.METRICS);
+  console.log('METRICS: ', data);
 
   const handleAddClick = () => {
     setAddIsOpen(true);

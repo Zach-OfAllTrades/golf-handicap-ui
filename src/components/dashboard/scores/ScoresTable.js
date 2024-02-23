@@ -7,10 +7,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import dayjs from "dayjs";
-import { useRounds } from "../../../hooks/useRounds";
+import { useFetch } from "../../../hooks/useFetch";
+import { FETCH_KEYS } from "../../../utils/general";
 
 const ScoresTable = () => {
-  const { data, isLoading, isError } = useRounds();
+  const { data, isLoading, isError } = useFetch(FETCH_KEYS.ROUNDS);
   if (isLoading) {
     return <></>; // TODO: Add loading skeleton
   }
@@ -21,9 +22,10 @@ const ScoresTable = () => {
         <TableHead>
           <TableRow>
             <TableCell>Course</TableCell>
-            <TableCell align="right">Tee</TableCell>
-            <TableCell align="right">Score</TableCell>
-            <TableCell align="right">AGS</TableCell>
+            <TableCell align="left">Tee</TableCell>
+            <TableCell align="">Score</TableCell>
+            <TableCell align="">AGS</TableCell>
+            <TableCell align="">Diff</TableCell>
             <TableCell align="right">Date</TableCell>
           </TableRow>
         </TableHead>
@@ -36,9 +38,10 @@ const ScoresTable = () => {
               <TableCell component="th" scope="row">
                 {row.tee.course.displayName}
               </TableCell>
-              <TableCell align="right">{row.tee.teeName}</TableCell>
-              <TableCell align="right">{row.score}</TableCell>
-              <TableCell align="right">{row.ags}</TableCell>
+              <TableCell align="left">{row.tee.teeName}</TableCell>
+              <TableCell align="">{row.score}</TableCell>
+              <TableCell align="">{row.ags}</TableCell>
+              <TableCell align="">+{row.ags - 72}</TableCell> {/*TODO: calculate & format actual diff here*/}
               <TableCell align="right">
                 {dayjs(row.date).format("MMM DD, YYYY")}
               </TableCell>

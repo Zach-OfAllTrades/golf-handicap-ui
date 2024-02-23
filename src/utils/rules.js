@@ -72,5 +72,3 @@ export const HANDICAP_DIFFS = {
     adjustment: 0,
   },
 };
-
-export const STANDARD_DATE_FORMAT = "YYYY-MM-DDTHH:mm:ssZ";
