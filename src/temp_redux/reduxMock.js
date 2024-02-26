@@ -8,7 +8,7 @@ export const getUserInfo = () => {
     registration_date: "12/12/2023",
     username: "zach.rose",
     password: "dummyP@ssword",
-    metrics: ["handicap", "avg_score", "avg_diff", "avg_sop", "handicap_trend"]
+    metrics: ["handicap", "avg_score", "avg_diff", "avg_sop", "handicap_trend", "lowest"]
   };
 };
 
