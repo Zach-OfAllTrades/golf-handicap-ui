@@ -1,5 +1,5 @@
-const COURSE_DATA_URL = "http://localhost:5000/courses";
+import { getFetch } from "./FetchService";
 
 export const getCourses = async () => {
-  return await fetch(`${COURSE_DATA_URL}`).then((response) => response.json());
+  return await getFetch(`${process.env.REACT_APP_API_URL}/courses`);
 };

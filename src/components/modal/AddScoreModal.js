@@ -11,12 +11,13 @@ import {
   Alert,
 } from "@mui/material";
 import React, { useState } from "react";
-import LocalDatePicker from "../DatePicker";
+import LocalDatePicker from "../organisms/date/DatePicker";
 import { saveRounds } from "../../services/RoundService";
 import { getUserId } from "../../temp_redux/reduxMock";
 import dayjs from "dayjs";
 import { FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
 import { useFetch } from "../../hooks/useFetch";
+import ScoreCard from "../dashboard/scores/Scorecard";
 
 const AddScoreModal = ({ open, onClose }) => {
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.COURSES);
@@ -35,7 +36,7 @@ const AddScoreModal = ({ open, onClose }) => {
   const onSubmit = async () => {
     const userId = getUserId();
     try {
-      const response = await saveRounds({
+      await saveRounds({
         ags,
         score,
         userId,
@@ -60,7 +61,7 @@ const AddScoreModal = ({ open, onClose }) => {
           Enter your round information so that it can be added to your profile.
         </DialogContentText>
         <Grid container>
-          <Grid container xs={12} spacing={1} marginY={1}>
+          <Grid container spacing={1} marginY={1}>
             <Grid item xs={6}>
               <Autocomplete
                 disablePortal
@@ -81,7 +82,7 @@ const AddScoreModal = ({ open, onClose }) => {
                 disabled={!selectedCourse}
                 margin="dense"
                 getOptionLabel={(tees) => tees.teeName}
-                options={selectedCourse?.tees}
+                options={selectedCourse?.tees ?? []}
                 onChange={(e, newValue) => {
                   setTee(newValue);
                 }}
@@ -92,7 +93,7 @@ const AddScoreModal = ({ open, onClose }) => {
           <Grid item xs={12}>
             <LocalDatePicker onChange={setDate} />
           </Grid>
-          <Grid container xs={12} spacing={1} flexDirection={"row"}>
+          <Grid container spacing={1} flexDirection={"row"}>
             <Grid item xs={4}>
               <TextField
                 margin="dense"
@@ -128,6 +129,7 @@ const AddScoreModal = ({ open, onClose }) => {
               </Alert>
             )}
           </Grid>
+          <ScoreCard />
         </Grid>
       </DialogContent>
       <DialogActions>

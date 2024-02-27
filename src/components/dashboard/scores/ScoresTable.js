@@ -22,31 +22,31 @@ const ScoresTable = () => {
         <TableHead>
           <TableRow>
             <TableCell>Course</TableCell>
-            <TableCell align="left">Tee</TableCell>
-            <TableCell align="">Score</TableCell>
-            <TableCell align="">AGS</TableCell>
-            <TableCell align="">Diff</TableCell>
+            <TableCell>Tee</TableCell>
+            <TableCell>Score</TableCell>
+            <TableCell>AGS</TableCell>
+            <TableCell>Diff</TableCell>
             <TableCell align="right">Date</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {data && data.map((row) => (
-            <TableRow
-              key={row.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.tee.course.displayName}
-              </TableCell>
-              <TableCell align="left">{row.tee.teeName}</TableCell>
-              <TableCell align="">{row.score}</TableCell>
-              <TableCell align="">{row.ags}</TableCell>
-              <TableCell align="">+{row.ags - 72}</TableCell> {/*TODO: calculate & format actual diff here*/}
-              <TableCell align="right">
-                {dayjs(row.date).format("MMM DD, YYYY")}
-              </TableCell>
-            </TableRow>
-          ))}
+          {data &&
+            data.map((row) => (
+              <TableRow
+                key={row.id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell>{row.tee.course.displayName}</TableCell>
+                <TableCell>{row.tee.teeName}</TableCell>
+                <TableCell>{row.score}</TableCell>
+                <TableCell>{row.ags}</TableCell>
+                <TableCell>+{row.ags - 72}</TableCell>
+                {/*TODO: calculate & format actual diff here*/}
+                <TableCell align="right">
+                  {dayjs(row.date).format("MMM DD, YYYY")}
+                </TableCell>
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </TableContainer>

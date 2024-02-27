@@ -1,7 +1,7 @@
 import { Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 
-const HandicapDetail = ({metric, caption}) => {
+const MetricDetail = ({metric, caption}) => {
   return (
     <Grid item xs={3}>
       <Typography variant="h16">{metric}</Typography>
@@ -11,4 +11,4 @@ const HandicapDetail = ({metric, caption}) => {
   );
 };
 
-export default HandicapDetail;
+export default MetricDetail;
