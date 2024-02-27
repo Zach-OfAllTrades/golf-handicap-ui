@@ -1,22 +1,16 @@
 import { getUserInfo } from "../temp_redux/reduxMock";
+import { getFetch, postFetch } from "./FetchService";
 
 export const getUserMetrics = async (userId) => {
   const { metrics } = getUserInfo();
-  return await fetch(`http://localhost:5000/metrics`, {
-    method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      userId,
-      metricKeys: metrics,
-    }),
-  }).then((response) => response.json());
+  const url = `${process.env.REACT_APP_API_URL}/metrics`;
+  const body = JSON.stringify({
+    userId,
+    metricKeys: metrics,
+  });
+  return await postFetch(url, body);
 };
 
 export const getHandicap = async (userId) => {
-  return await fetch(`http://localhost:5000/metric/handicap/${userId}`, {
-    mode: "cors",
-  }).then((response) => response.json());
+  return await getFetch(`${process.env.REACT_APP_API_URL}/metric/handicap/${userId}`);
 };
