@@ -27,11 +27,14 @@ const AddScoreModal = ({ open, onClose }) => {
   const [tee, setTee] = useState();
   const [date, setDate] = useState();
   const [saveError, setSaveError] = useState(false);
+  const [showScorecard, isShowingScorecard] = useState(false);
 
   if (isLoading) {
     return <></>;
   }
-  const handleDetailClick = () => {};
+  const toggleDetails = () => {
+    isShowingScorecard(!showScorecard);
+  };
 
   const onSubmit = async () => {
     const userId = getUserId();
@@ -129,23 +132,25 @@ const AddScoreModal = ({ open, onClose }) => {
               </Alert>
             )}
           </Grid>
-          <ScoreCard />
+          {showScorecard && <ScoreCard teeName={tee.teeName} />}
         </Grid>
       </DialogContent>
       <DialogActions>
         <Grid container spacing={1} marginLeft={1} marginRight={1}>
           <Grid item xs={6}>
-            <Button onClick={handleDetailClick}>+ Enter Detailed Score</Button>
+            <Button onClick={toggleDetails} disabled={tee === undefined}>
+              {showScorecard ? "- Close" : "+ Enter"} Detailed Score
+            </Button>
           </Grid>
           <Grid item xs={6}>
             <Grid flex container spacing={1} sx={{ justifyContent: "right" }}>
               <Grid item>
-                <Button variant="outlined" onClick={onClose}>
+                <Button variant="outlined" onClick={onClose} sx={{ borderColor: "#588157", color: "#588157" }}>
                   Cancel
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant="contained" onClick={onSubmit}>
+                <Button variant="contained" onClick={onSubmit} sx={{ backgroundColor: "#588157" }}>
                   Submit
                 </Button>
               </Grid>

@@ -20,7 +20,7 @@ const ScoresTable = () => {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
-          <TableRow>
+          <TableRow sx={{ backgroundColor: "#cfe1b9"}}>
             <TableCell>Course</TableCell>
             <TableCell>Tee</TableCell>
             <TableCell>Score</TableCell>

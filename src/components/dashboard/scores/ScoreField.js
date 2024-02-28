@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { TextField } from "@mui/material";
 
 const ScoreField = ({ score, setScores }) => {
+  const [editing, isEditing] = useState(score.format.border.length >= 0);
+
   return (
     <>
-      {score.format.border.length > 0 ? (
-        <div style={score.format}>{score.strokes}</div>
+      {!editing ? (
+        <div style={score.format} onClick={() => isEditing(true)}>
+          {score.strokes}
+        </div>
       ) : (
         <TextField
+          autoFocus
           variant="standard"
           size="small"
           margin="none"
-          onBlur={() => {
-            {
-              /*format cell*/
-            }
-          }}
+          value={score.strokes}
+          onBlur={(e) => e.target.value.length > 0 && isEditing(false)}
           onChange={(e) => {
             e.preventDefault();
             setScores({
