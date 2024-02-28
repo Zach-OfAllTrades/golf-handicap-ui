@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useMemo, useReducer } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -31,11 +31,10 @@ const ScoreCard = ({ teeName = "BLUE", scorecard = MOCK_SCORECARD }) => {
 
   const [scores, setScores] = useReducer(
     (scores, payload) => {
-      console.log(scores);
       const scoreObj = scores.find((score) => score.number === payload.number);
       scoreObj.strokes = payload.strokes;
       scoreObj.format = formatScore(payload);
-      return scores;
+      return [...scores];
     },
     scorecard.holes.map((hole) => {
       const { number, par, handicap } = hole;
@@ -53,7 +52,7 @@ const ScoreCard = ({ teeName = "BLUE", scorecard = MOCK_SCORECARD }) => {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small">
         <TableHead>
-          <TableRow>
+          <TableRow sx={{backgroundColor: "#cfe1b9"}}>
             <TableCell>HOLE</TableCell>
             {scorecard.holes.map((hole) => (
               <TableCell align="center">{hole.number}</TableCell>
@@ -86,27 +85,6 @@ const ScoreCard = ({ teeName = "BLUE", scorecard = MOCK_SCORECARD }) => {
             <TableCell>SCORE</TableCell>
             {scores.map((score) => (
               <TableCell align="center">
-                {/* <div style={score.format}>
-                  <TextField
-                    variant="standard"
-                    size="small"
-                    margin="none"
-                    onBlur={() => {
-                      {
-                      }
-                    }}
-                    onChange={(e) => {
-                      e.preventDefault();
-                      setScores({
-                        number: score.number,
-                        par: score.par,
-                        strokes: e.target.value,
-                      });
-                    }}
-                  >
-                    {score.strokes}
-                  </TextField>
-                </div> */}
                 <ScoreField score={score} setScores={setScores} />
               </TableCell>
             ))}
