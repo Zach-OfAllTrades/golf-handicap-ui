@@ -12,8 +12,9 @@ const SHARED_STYLE = {
   card: {
     // background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
     height: 565,
+    width: 300,
     margin: 1,
-    marginRight: 7.5
+    marginRight: 7.5,
   },
   header: {
     background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
@@ -27,8 +28,8 @@ const SHARED_STYLE = {
     color: "black",
     height: 150,
     width: 150,
-    margin: 5,
-    marginY: 15
+    // margin: 10,
+    marginY: 15,
   },
 };
 
@@ -45,7 +46,12 @@ const MeCard = () => {
         sx={SHARED_STYLE.header}
       ></CardHeader>
       <CardContent
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: 10 }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: 10,
+        }}
       >
         <Typography variant="h4">{`${user.first_name} ${user.last_name}`}</Typography>
         <Typography variant="h6">{user.location}</Typography>
