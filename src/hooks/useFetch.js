@@ -1,16 +1,20 @@
-import React, {useState, useEffect} from "react";
-import { getHandicap, getUserMetrics } from "../services/MetricService";
+import React, { useState, useEffect } from "react";
+import {
+  getHandicap,
+  getMetricsByUser,
+  getUserMetrics,
+} from "../services/MetricService";
 import { getUserId } from "../temp_redux/reduxMock";
 import { FETCH_KEYS } from "../utils/general";
 import { getRounds } from "../services/RoundService";
 import { getCourses } from "../services/CourseService";
 
 const FETCH_FUNCS = {
-  [FETCH_KEYS.METRICS]: (userId) => getUserMetrics(userId), 
-  [FETCH_KEYS.ROUNDS]: (userId) => getRounds(userId), 
-  [FETCH_KEYS.COURSES]: (userId) => getCourses(userId), 
-  [FETCH_KEYS.HANDICAP]: (userId) => getHandicap(userId), 
-}
+  [FETCH_KEYS.METRICS]: (userId) => getMetricsByUser(userId),
+  [FETCH_KEYS.ROUNDS]: (userId) => getRounds(userId),
+  [FETCH_KEYS.COURSES]: (userId) => getCourses(userId),
+  [FETCH_KEYS.HANDICAP]: (userId) => getHandicap(userId),
+};
 
 export const useFetch = (key) => {
   const userId = getUserId();
@@ -38,4 +42,4 @@ export const useFetch = (key) => {
   }, [userId]);
 
   return { data, isLoading, isError };
-}
+};

@@ -11,14 +11,14 @@ import { getUserInfo } from "../../../temp_redux/reduxMock";
 const SHARED_STYLE = {
   card: {
     // background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
-    height: 565,
+    height: 450,
     width: 300,
     margin: 1,
     marginRight: 7.5,
   },
   header: {
     background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
-    height: 175,
+    height: 100,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -29,7 +29,7 @@ const SHARED_STYLE = {
     height: 150,
     width: 150,
     // margin: 10,
-    marginY: 15,
+    marginY: 5,
   },
 };
 
