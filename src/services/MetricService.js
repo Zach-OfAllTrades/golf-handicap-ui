@@ -1,4 +1,3 @@
-import { getUserInfo } from "../temp_redux/reduxMock";
 import { getFetch, postFetch } from "./FetchService";
 import { getUser } from "./UserService";
 

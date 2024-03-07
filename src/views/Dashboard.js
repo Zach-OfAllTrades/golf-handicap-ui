@@ -1,6 +1,5 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
-import HandicapCard from "../components/dashboard/handicap/HandicapCard";
 import AddScoreModal from "../components/modal/AddScoreModal";
 import ScoresTable from "../components/dashboard/scores/ScoresTable";
 import { FETCH_KEYS } from "../utils/general";

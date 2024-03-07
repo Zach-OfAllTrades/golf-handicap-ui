@@ -27,24 +27,30 @@ const SHARED_STYLE = {
   },
 };
 
-const MetricCard = ({ main, metric, title, trend }) => {
-  const cardStyle = main ? METRIC_CARD_STYLE.main : METRIC_CARD_STYLE.secondary;
+const MAIN_METRIC_KEY = "handicap";
+
+const MetricCard = ({ metric, trendMeasurement }) => {
+  const cardStyle =
+    metric.key === MAIN_METRIC_KEY
+      ? METRIC_CARD_STYLE.main
+      : METRIC_CARD_STYLE.secondary;
+  const trendDesc = `vs last ${trendMeasurement}`;
+  const showTrend = metric.value.trend !== undefined;
   return (
     <Card sx={[cardStyle?.card, SHARED_STYLE.card]}>
-      <CardHeader subheader={title}></CardHeader>
+      <CardHeader subheader={metric.title}></CardHeader>
       <CardContent sx={{ display: "flex", flexDirection: "column" }}>
         <Typography sx={cardStyle?.textColor} variant="h1" alignSelf="center">
-          {metric}
+          {metric.value.current}
         </Typography>
-        {/* <Divider light /> */}
-        {trend && (
+        {showTrend && (
           <>
             <Typography
               sx={cardStyle?.textColor}
               variant="subtitle1"
               alignSelf="center"
             >
-              {trend.change}
+              {metric.value.trend}
             </Typography>
             <Typography
               sx={cardStyle?.textColor}
@@ -52,7 +58,7 @@ const MetricCard = ({ main, metric, title, trend }) => {
               alignSelf="center"
               marginTop={1}
             >
-              vs last {trend.measurement}
+              {trendDesc}
             </Typography>
           </>
         )}
