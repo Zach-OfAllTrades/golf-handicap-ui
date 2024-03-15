@@ -9,7 +9,10 @@ import {
   Grid,
   Autocomplete,
   Alert,
+  IconButton,
+  Tooltip,
 } from "@mui/material";
+import { AddCircle, Remove, CalendarViewWeek } from "@mui/icons-material";
 import React, { useState } from "react";
 import LocalDatePicker from "../organisms/date/DatePicker";
 import { saveRounds } from "../../services/RoundService";
@@ -18,20 +21,24 @@ import dayjs from "dayjs";
 import { FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
 import { useFetch } from "../../hooks/useFetch";
 import ScoreCard from "../dashboard/scores/Scorecard";
+import SelectCourse from "./SelectCourse";
+import AddCourse from "./AddCourse";
 
 const AddScoreModal = ({ open, onClose }) => {
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.COURSES);
-  const [selectedCourse, setSelectedCourse] = useState();
+  // const [selectedCourse, setSelectedCourse] = useState();
   const [ags, setAgs] = useState();
   const [score, setScore] = useState();
   const [tee, setTee] = useState();
   const [date, setDate] = useState();
   const [saveError, setSaveError] = useState(false);
   const [showScorecard, isShowingScorecard] = useState(false);
+  const [addingCourse, isAddingcourse] = useState(false);
 
   if (isLoading) {
     return <></>;
   }
+
   const toggleDetails = () => {
     isShowingScorecard(!showScorecard);
   };
@@ -56,6 +63,10 @@ const AddScoreModal = ({ open, onClose }) => {
     setSaveError(false);
   };
 
+  const handleAddClick = () => {
+    isAddingcourse(true);
+  };
+
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>Add a Round</DialogTitle>
@@ -64,35 +75,15 @@ const AddScoreModal = ({ open, onClose }) => {
           Enter your round information so that it can be added to your profile.
         </DialogContentText>
         <Grid container>
-          <Grid container spacing={1} marginY={1}>
-            <Grid item xs={6}>
-              <Autocomplete
-                disablePortal
-                margin="dense"
-                getOptionLabel={(data) => data.displayName}
-                options={data}
-                onChange={(e, newValue) => {
-                  setSelectedCourse(newValue);
-                }}
-                renderInput={(params) => (
-                  <TextField {...params} label="Course" />
-                )}
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <Autocomplete
-                disablePortal
-                disabled={!selectedCourse}
-                margin="dense"
-                getOptionLabel={(tees) => tees.teeName}
-                options={selectedCourse?.tees ?? []}
-                onChange={(e, newValue) => {
-                  setTee(newValue);
-                }}
-                renderInput={(params) => <TextField {...params} label="Tees" />}
-              />
-            </Grid>
-          </Grid>
+          {addingCourse ? (
+            <AddCourse />
+          ) : (
+            <SelectCourse
+              courses={data}
+              setTee={setTee}
+              handleAddClick={handleAddClick}
+            />
+          )}
           <Grid item xs={12}>
             <LocalDatePicker onChange={setDate} />
           </Grid>
@@ -138,19 +129,31 @@ const AddScoreModal = ({ open, onClose }) => {
       <DialogActions>
         <Grid container spacing={1} marginLeft={1} marginRight={1}>
           <Grid item xs={6}>
-            <Button onClick={toggleDetails} disabled={tee === undefined}>
-              {showScorecard ? "- Close" : "+ Enter"} Detailed Score
+            <Button
+              onClick={toggleDetails}
+              disabled={tee === undefined}
+              startIcon={showScorecard ? <Remove /> : <CalendarViewWeek />}
+            >
+              {showScorecard ? "Close" : "Enter"} Detailed Score
             </Button>
           </Grid>
           <Grid item xs={6}>
             <Grid flex container spacing={1} sx={{ justifyContent: "right" }}>
               <Grid item>
-                <Button variant="outlined" onClick={onClose} sx={{ borderColor: "#588157", color: "#588157" }}>
+                <Button
+                  variant="outlined"
+                  onClick={onClose}
+                  sx={{ borderColor: "#588157", color: "#588157" }}
+                >
                   Cancel
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant="contained" onClick={onSubmit} sx={{ backgroundColor: "#588157" }}>
+                <Button
+                  variant="contained"
+                  onClick={onSubmit}
+                  sx={{ backgroundColor: "#588157" }}
+                >
                   Submit
                 </Button>
               </Grid>
