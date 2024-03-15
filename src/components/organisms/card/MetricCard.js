@@ -3,19 +3,18 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Divider,
   Grid,
-  Box,
   Typography,
 } from "@mui/material";
 import React from "react";
+import { COLORS, PALLETE } from "../../../utils/general";
 
 const METRIC_CARD_STYLE = {
   main: {
     card: {
-      background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
+      background: PALLETE.light.gradient,
     },
-    textColor: { color: "white" },
+    textColor: { color: COLORS.white },
   },
   secondary: {},
 };
@@ -62,6 +61,7 @@ const MetricCard = ({ metric, trendMeasurement }) => {
         </Typography>
         {showTrend && (
           <>
+          <Grid></Grid>
             <Typography
               sx={cardStyle?.textColor}
               variant="subtitle1"
@@ -69,12 +69,12 @@ const MetricCard = ({ metric, trendMeasurement }) => {
             >
               {metric.value.trend}
             </Typography>
-            <Box sx={{ borderRadius: "50%", backgroundColor: "white" }}>
+            {/* <Box sx={{ borderRadius: "50%", backgroundColor: "white" }}>
               {getTrendIcon(metric.value.trend)}
-            </Box>
+            </Box> */}
             <Typography
               sx={cardStyle?.textColor}
-              variant="subtitle1"
+              variant="subtitle2"
               alignSelf="center"
               marginTop={1}
             >

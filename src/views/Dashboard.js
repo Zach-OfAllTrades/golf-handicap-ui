@@ -6,6 +6,7 @@ import { FETCH_KEYS } from "../utils/general";
 import { useFetch } from "../hooks/useFetch";
 import MetricDeck from "../components/dashboard/metrics/MetricDeck";
 import MeCard from "../components/dashboard/me/MeCard";
+import AddButton from "../components/organisms/AddButton";
 
 const Dashboard = () => {
   const [addIsOpen, setAddIsOpen] = useState(false);
@@ -24,19 +25,20 @@ const Dashboard = () => {
     <Container maxWidth="false">
       <Grid container rowSpacing={2} columnSpacing={2}>
         <Grid item xs={12}>
-          <Grid container columnSpacing={1}>
+          {/* <Grid container columnSpacing={1}>
             <Grid item>
               <Button onClick={handleAddClick}>+</Button>
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">Add Your Score</Typography>
             </Grid>
-          </Grid>
+          </Grid> */}
+          {/* <AddButton handleClick={handleAddClick} /> */}
         </Grid>
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={3}>
-              <MeCard />
+              <MeCard handleAddClick={handleAddClick}/>
             </Grid>
             <Grid item xs={9}>
               {data && <MetricDeck metrics={data} />}

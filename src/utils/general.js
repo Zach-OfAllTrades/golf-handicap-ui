@@ -7,6 +7,34 @@ export const FETCH_KEYS = {
   METRICS: "metrics",
 };
 
+export const DIV_DEBUG = {
+  border: "1px solid red",
+};
+
+export const BUTTON_COLORS = {
+  MAIN: "#588157",
+  WHITE: "#FFF",
+};
+
+export const COLORS = {
+  melon: "#cfe1b9",
+  lime: "#718355",
+  forest: "#588157",
+  white: "#FFF",
+  black: "#000",
+};
+
+export const PALLETE = {
+  light: {
+    gradient: `linear-gradient(to right bottom, ${COLORS.melon}, ${COLORS.lime})`,
+    button: {
+      main: COLORS.forest,
+      contrast: COLORS.white,
+    },
+  },
+  dark: {},
+};
+
 export const MOCK_SCORECARD = {
   teeId: "593cf79c-237f-42ff-99e9-b3d1d9da5768",
   holes: [

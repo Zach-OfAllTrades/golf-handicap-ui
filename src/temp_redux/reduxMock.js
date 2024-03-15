@@ -1,3 +1,5 @@
+import { PALLETE } from "../utils/general";
+
 // const USER_ID = "95532b04-fa19-496f-90dd-dbced6199525";
 const USER_ID = "194619b7-eb90-4bfb-ae69-bb55bf1d80b4";
 
@@ -22,6 +24,10 @@ export const getUserInfo = () => {
     ],
   };
 };
+
+export const getColorPallete = () => {
+  return PALLETE.light;
+}
 
 export const getUserId = () => {
   return USER_ID;
