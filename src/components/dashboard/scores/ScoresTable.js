@@ -16,11 +16,18 @@ const ScoresTable = () => {
     return <></>; // TODO: Add loading skeleton
   }
 
+  const calculateRoundDiff = (round) => {
+    const { ags, tee } = round;
+    const diff = ((ags - tee.rating) * 113) / tee.slope;
+    const symbol = diff >= 0 ? "+" : "-";
+    return `${symbol} ${diff.toFixed(2)}`;
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
-          <TableRow sx={{ backgroundColor: "#cfe1b9"}}>
+          <TableRow sx={{ backgroundColor: "#cfe1b9" }}>
             <TableCell>Course</TableCell>
             <TableCell>Tee</TableCell>
             <TableCell>Score</TableCell>
@@ -40,8 +47,7 @@ const ScoresTable = () => {
                 <TableCell>{row.tee.teeName}</TableCell>
                 <TableCell>{row.score}</TableCell>
                 <TableCell>{row.ags}</TableCell>
-                <TableCell>+{row.ags - 72}</TableCell>
-                {/*TODO: calculate & format actual diff here*/}
+                <TableCell>{calculateRoundDiff(row)}</TableCell>
                 <TableCell align="right">
                   {dayjs(row.date).format("MMM DD, YYYY")}
                 </TableCell>
