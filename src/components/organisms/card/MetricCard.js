@@ -1,19 +1,20 @@
+import { TrendingDown, TrendingFlat, TrendingUp } from "@mui/icons-material";
 import {
   Card,
   CardContent,
   CardHeader,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
 import React from "react";
+import { COLORS, PALLETE } from "../../../utils/general";
 
 const METRIC_CARD_STYLE = {
   main: {
     card: {
-      background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
+      background: PALLETE.light.gradient,
     },
-    textColor: { color: "white" },
+    textColor: { color: COLORS.white },
   },
   secondary: {},
 };
@@ -27,6 +28,12 @@ const SHARED_STYLE = {
   },
 };
 
+const TREND_ICONS = {
+  FLAT: <TrendingFlat />,
+  UP: <TrendingUp />,
+  DOWN: <TrendingDown />,
+};
+
 const MAIN_METRIC_KEY = "handicap";
 
 const MetricCard = ({ metric, trendMeasurement }) => {
@@ -36,6 +43,15 @@ const MetricCard = ({ metric, trendMeasurement }) => {
       : METRIC_CARD_STYLE.secondary;
   const trendDesc = `vs last ${trendMeasurement}`;
   const showTrend = metric.value.trend !== undefined;
+  const getTrendIcon = (trend) => {
+    if (trend > 0) {
+      return <TrendingUp />;
+    } else if (trend < 0) {
+      return <TrendingDown />;
+    } else {
+      return <TrendingFlat />;
+    }
+  };
   return (
     <Card sx={[cardStyle?.card, SHARED_STYLE.card]}>
       <CardHeader subheader={metric.title}></CardHeader>
@@ -45,6 +61,7 @@ const MetricCard = ({ metric, trendMeasurement }) => {
         </Typography>
         {showTrend && (
           <>
+          <Grid></Grid>
             <Typography
               sx={cardStyle?.textColor}
               variant="subtitle1"
@@ -52,9 +69,12 @@ const MetricCard = ({ metric, trendMeasurement }) => {
             >
               {metric.value.trend}
             </Typography>
+            {/* <Box sx={{ borderRadius: "50%", backgroundColor: "white" }}>
+              {getTrendIcon(metric.value.trend)}
+            </Box> */}
             <Typography
               sx={cardStyle?.textColor}
-              variant="subtitle1"
+              variant="subtitle2"
               alignSelf="center"
               marginTop={1}
             >

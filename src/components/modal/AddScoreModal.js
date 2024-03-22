@@ -18,7 +18,7 @@ import LocalDatePicker from "../organisms/date/DatePicker";
 import { saveRounds } from "../../services/RoundService";
 import { getUserId } from "../../temp_redux/reduxMock";
 import dayjs from "dayjs";
-import { FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
+import { BUTTON_COLORS, FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
 import { useFetch } from "../../hooks/useFetch";
 import ScoreCard from "../dashboard/scores/Scorecard";
 import SelectCourse from "./SelectCourse";
@@ -143,7 +143,7 @@ const AddScoreModal = ({ open, onClose }) => {
                 <Button
                   variant="outlined"
                   onClick={onClose}
-                  sx={{ borderColor: "#588157", color: "#588157" }}
+                  sx={{ borderColor: BUTTON_COLORS.MAIN, color: BUTTON_COLORS.MAIN }}
                 >
                   Cancel
                 </Button>
@@ -152,7 +152,7 @@ const AddScoreModal = ({ open, onClose }) => {
                 <Button
                   variant="contained"
                   onClick={onSubmit}
-                  sx={{ backgroundColor: "#588157" }}
+                  sx={{ backgroundColor: BUTTON_COLORS.MAIN }}
                 >
                   Submit
                 </Button>

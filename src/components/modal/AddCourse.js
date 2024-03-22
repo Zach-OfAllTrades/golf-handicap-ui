@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import AddTee from "./AddTee";
 
 const AddCourse = ({ courses, setTee }) => {
+  const [teeError, isTeeError] = useState(false);
   const defaultTee = {
     teeName: "",
     rating: "",
@@ -81,7 +82,7 @@ const AddCourse = ({ courses, setTee }) => {
         <AddTee onTeeChange={handleTeeChange} index={index}></AddTee>
       ))}
       <Tooltip title="Add Another Tee">
-        <IconButton onClick={handleAddTee}>
+        <IconButton disabled={tees.length > 4} onClick={handleAddTee}>
           <AddCircle />
         </IconButton>
       </Tooltip>

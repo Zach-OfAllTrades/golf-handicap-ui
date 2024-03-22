@@ -1,18 +1,15 @@
-import {
-  TextField,
-  Grid,
-} from "@mui/material";
+import { Delete } from "@mui/icons-material";
+import { TextField, Grid, IconButton } from "@mui/material";
 import React, { useState } from "react";
 
-const AddTee = ({onTeeChange, index}) => {
-
+const AddTee = ({ onTeeChange, index }) => {
   const handleTeeChange = (value, id) => {
-    onTeeChange({value, id}, index);
+    onTeeChange({ value, id }, index);
   };
 
   return (
     <Grid container spacing={1} marginY={1}>
-      <Grid item xs={4}>
+      <Grid item xs={3}>
         <TextField
           margin="dense"
           id="teeName"
@@ -49,7 +46,7 @@ const AddTee = ({onTeeChange, index}) => {
         <TextField
           margin="dense"
           id="yardage"
-          label="Yardage"
+          label="Yards"
           variant="outlined"
           onChange={(e) => {
             handleTeeChange(e.target.value, e.target.id);
@@ -66,6 +63,11 @@ const AddTee = ({onTeeChange, index}) => {
             handleTeeChange(e.target.value, e.target.id);
           }}
         />
+      </Grid>
+      <Grid item xs={1}>
+        <IconButton>
+          <Delete></Delete>
+        </IconButton>
       </Grid>
     </Grid>
   );

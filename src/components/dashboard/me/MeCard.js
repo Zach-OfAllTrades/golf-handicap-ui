@@ -1,23 +1,26 @@
 import {
   Avatar,
   Card,
+  CardActions,
   CardContent,
   CardHeader,
   Typography,
 } from "@mui/material";
 import React from "react";
-import { getUserInfo } from "../../../temp_redux/reduxMock";
+import { getColorPallete, getUserInfo } from "../../../temp_redux/reduxMock";
+import AddButton from "../../organisms/AddButton";
 
 const SHARED_STYLE = {
   card: {
-    // background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
     height: 450,
     width: 300,
     margin: 1,
     marginRight: 7.5,
+    display: "flex",
+    flexDirection: "column",
   },
   header: {
-    background: "linear-gradient(to right bottom, #cfe1b9, #718355)",
+    background: getColorPallete().gradient,
     height: 100,
     display: "flex",
     flexDirection: "column",
@@ -33,7 +36,7 @@ const SHARED_STYLE = {
   },
 };
 
-const MeCard = () => {
+const MeCard = ({handleAddClick}) => {
   const user = getUserInfo();
   return (
     <Card sx={SHARED_STYLE.card}>
@@ -56,6 +59,9 @@ const MeCard = () => {
         <Typography variant="h4">{`${user.first_name} ${user.last_name}`}</Typography>
         <Typography variant="h6">{user.location}</Typography>
       </CardContent>
+      <CardActions sx={{ marginTop: "auto" }}>
+        <AddButton handleClick={handleAddClick}/>
+      </CardActions>
     </Card>
   );
 };
