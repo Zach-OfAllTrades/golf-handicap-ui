@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React, { useState } from "react";
 import AddScoreModal from "../components/modal/AddScoreModal";
 import ScoresTable from "../components/dashboard/scores/ScoresTable";
@@ -6,7 +6,6 @@ import { FETCH_KEYS } from "../utils/general";
 import { useFetch } from "../hooks/useFetch";
 import MetricDeck from "../components/dashboard/metrics/MetricDeck";
 import MeCard from "../components/dashboard/me/MeCard";
-import AddButton from "../components/organisms/AddButton";
 
 const Dashboard = () => {
   const [addIsOpen, setAddIsOpen] = useState(false);
@@ -25,15 +24,6 @@ const Dashboard = () => {
     <Container maxWidth="false">
       <Grid container rowSpacing={2} columnSpacing={2}>
         <Grid item xs={12}>
-          {/* <Grid container columnSpacing={1}>
-            <Grid item>
-              <Button onClick={handleAddClick}>+</Button>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">Add Your Score</Typography>
-            </Grid>
-          </Grid> */}
-          {/* <AddButton handleClick={handleAddClick} /> */}
         </Grid>
         <Grid item xs={12}>
           <Grid container>
@@ -44,8 +34,6 @@ const Dashboard = () => {
               {data && <MetricDeck metrics={data} />}
             </Grid>
           </Grid>
-
-          {/* <HandicapCard /> */}
         </Grid>
         <Grid item xs={9}>
           <ScoresTable />

@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import dayjs from "dayjs";
 import { useFetch } from "../../../hooks/useFetch";
-import { FETCH_KEYS } from "../../../utils/general";
+import { COLORS, FETCH_KEYS } from "../../../utils/general";
 
 const ScoresTable = () => {
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.ROUNDS);
@@ -27,7 +27,7 @@ const ScoresTable = () => {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
-          <TableRow sx={{ backgroundColor: "#cfe1b9" }}>
+          <TableRow sx={{ backgroundColor: COLORS.melon }}>
             <TableCell>Course</TableCell>
             <TableCell>Tee</TableCell>
             <TableCell>Score</TableCell>

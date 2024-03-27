@@ -7,6 +7,8 @@ export const FETCH_KEYS = {
   METRICS: "metrics",
 };
 
+export const MAIN_METRIC_KEY = FETCH_KEYS.HANDICAP;
+
 export const DIV_DEBUG = {
   border: "1px solid red",
 };
