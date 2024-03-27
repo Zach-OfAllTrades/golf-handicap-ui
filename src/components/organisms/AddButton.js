@@ -9,10 +9,8 @@ const AddButton = ({ handleClick }) => {
     textTransform: "none",
     fontSize: 16,
     padding: "6px 12px",
-    //   border: '1px solid',
     lineHeight: 1.5,
     backgroundColor: BUTTON_COLORS.WHITE,
-    //   borderColor: BUTTON_COLORS.MAIN,
     color: BUTTON_COLORS.MAIN,
     "&:hover": {
       backgroundColor: BUTTON_COLORS.WHITE,

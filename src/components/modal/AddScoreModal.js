@@ -7,12 +7,9 @@ import {
   TextField,
   DialogActions,
   Grid,
-  Autocomplete,
   Alert,
-  IconButton,
-  Tooltip,
 } from "@mui/material";
-import { AddCircle, Remove, CalendarViewWeek } from "@mui/icons-material";
+import { Remove, CalendarViewWeek } from "@mui/icons-material";
 import React, { useState } from "react";
 import LocalDatePicker from "../organisms/date/DatePicker";
 import { saveRounds } from "../../services/RoundService";
@@ -26,7 +23,7 @@ import AddCourse from "./AddCourse";
 
 const AddScoreModal = ({ open, onClose }) => {
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.COURSES);
-  // const [selectedCourse, setSelectedCourse] = useState();
+
   const [ags, setAgs] = useState();
   const [score, setScore] = useState();
   const [tee, setTee] = useState();

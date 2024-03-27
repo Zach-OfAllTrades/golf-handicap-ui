@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer } from "react";
+import React, { useReducer } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -6,21 +6,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import dayjs from "dayjs";
-import { useFetch } from "../../../hooks/useFetch";
-import { FETCH_KEYS, MOCK_SCORECARD } from "../../../utils/general";
-import { TextField } from "@mui/material";
+import { COLORS, MOCK_SCORECARD } from "../../../utils/general"
 import ScoreField from "./ScoreField";
 
 const ScoreCard = ({ teeName = "BLUE", scorecard = MOCK_SCORECARD }) => {
-  //   const { data, isLoading, isError } = useFetch(FETCH_KEYS.ROUNDS);
-  //   const data = MOCK_SCORECARD;
-
-  // initial score array = custom obj w/ hole.number, hole.par, hole.handicap with score undefined and format key
-  // onBlur pass in score and set strokes and calc format
-  // format func that also decides ags(max score) for that hole
-  // completion tracker?
-
   const formatScore = (score) => {
     const toPar = score.strokes - score.par;
     return {
@@ -52,7 +41,7 @@ const ScoreCard = ({ teeName = "BLUE", scorecard = MOCK_SCORECARD }) => {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small">
         <TableHead>
-          <TableRow sx={{backgroundColor: "#cfe1b9"}}>
+          <TableRow sx={{backgroundColor: COLORS.melon}}>
             <TableCell>HOLE</TableCell>
             {scorecard.holes.map((hole) => (
               <TableCell align="center">{hole.number}</TableCell>

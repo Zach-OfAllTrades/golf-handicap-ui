@@ -7,34 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { COLORS, PALLETE } from "../../../utils/general";
+import { MAIN_METRIC_KEY } from "../../../utils/general";
+import { METRIC_CARD_STYLE, SHARED_STYLE } from "./MetricCard.style";
 
-const METRIC_CARD_STYLE = {
-  main: {
-    card: {
-      background: PALLETE.light.gradient,
-    },
-    textColor: { color: COLORS.white },
-  },
-  secondary: {},
-};
-
-const SHARED_STYLE = {
-  card: {
-    minWidth: 250,
-    maxWidth: 250,
-    height: 275,
-    margin: 1,
-  },
-};
-
-const TREND_ICONS = {
-  FLAT: <TrendingFlat />,
-  UP: <TrendingUp />,
-  DOWN: <TrendingDown />,
-};
-
-const MAIN_METRIC_KEY = "handicap";
 
 const MetricCard = ({ metric, trendMeasurement }) => {
   const cardStyle =
