@@ -6,6 +6,11 @@ import { FETCH_KEYS } from "../utils/general";
 import { useFetch } from "../hooks/useFetch";
 import MetricDeck from "../components/dashboard/metrics/MetricDeck";
 import MeCard from "../components/dashboard/me/MeCard";
+import MetricContainer from "../components/dashboard/metrics/MetricContainer";
+
+const border = {
+  border: "1px solid red",
+};
 
 const Dashboard = () => {
   const [addIsOpen, setAddIsOpen] = useState(false);
@@ -23,15 +28,14 @@ const Dashboard = () => {
   return (
     <Container maxWidth="false">
       <Grid container rowSpacing={2} columnSpacing={2}>
-        <Grid item xs={12}>
-        </Grid>
+        <Grid item xs={12}></Grid>
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={3}>
-              <MeCard handleAddClick={handleAddClick}/>
+              <MeCard handleAddClick={handleAddClick} />
             </Grid>
             <Grid item xs={9}>
-              {data && <MetricDeck metrics={data} />}
+              {data && <MetricContainer metrics={data} />}
             </Grid>
           </Grid>
         </Grid>

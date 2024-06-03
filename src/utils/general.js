@@ -7,6 +7,21 @@ export const FETCH_KEYS = {
   METRICS: "metrics",
 };
 
+export const METIRC_KEYS = {
+  SCORE: "avg_score",
+  SOP: "avg_sop",
+  DIFF: "avg_diff",
+  HANDI: "handicap",
+  LOW: "lowest",
+};
+
+export const TREND_MEASURMENTS = [
+  { id: "week", label: "Wk" },
+  { id: "month", label: "Mo" },
+  { id: "year", label: "Yr" },
+  { id: "all", label: "All" },
+];
+
 export const MAIN_METRIC_KEY = FETCH_KEYS.HANDICAP;
 
 export const DIV_DEBUG = {
