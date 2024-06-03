@@ -19,8 +19,8 @@ const ScoresTable = () => {
   const calculateRoundDiff = (round) => {
     const { ags, tee } = round;
     const diff = ((ags - tee.rating) * 113) / tee.slope;
-    const symbol = diff >= 0 ? "+" : "-";
-    return `${symbol} ${diff.toFixed(2)}`;
+    const symbol = diff >= 0 ? "+" : "";
+    return `${symbol}${diff.toFixed(2)}`;
   };
 
   return (
