@@ -1,11 +1,13 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import MetricCard from "../../organisms/card/MetricCard";
-import { COLORS } from "../../../utils/general";
+import MetricCard from "../../organisms/card/metric/MetricCard";
+import { BORDER } from "../../organisms/card/metric/MetricCard.style";
+
+const { mainBorder } = BORDER;
 
 const MetricDeck = ({ metrics, trendMeasurement = "month" }) => {
   return (
-    <Grid container overflow="scroll" sx={{backgroundColor: COLORS.dust, borderRadius: 2, height: 450, width: 800}}>
+    <Grid container overflow="scroll" flexWrap="nowrap">
       {metrics.map((metric) => (
         <MetricCard
           metric={metric}
