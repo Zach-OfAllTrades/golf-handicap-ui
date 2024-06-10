@@ -1,4 +1,5 @@
 import { getColorPallete } from "../../../temp_redux/reduxMock";
+import { COLORS } from "../../../utils/general";
 
 export const ALIGN_CENTER = {
   display: "flex",
@@ -21,8 +22,8 @@ export const ME_STYLE = {
     ...ALIGN_CENTER,
   },
   avatar: {
-    bgcolor: "#e9ecef",
-    color: "black",
+    bgcolor: COLORS.dust,
+    color: COLORS.black,
     height: 150,
     width: 150,
     marginY: 5,
