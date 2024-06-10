@@ -12,9 +12,9 @@ export const METRIC_CARD_STYLE = {
 
 export const SHARED_STYLE = {
   card: {
-    minWidth: 250,
-    maxWidth: 250,
-    height: 275,
+    minWidth: 200,
+    maxWidth: 200,
+    height: 200,
     margin: 1,
   },
 };

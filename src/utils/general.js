@@ -24,6 +24,7 @@ export const COLORS = {
   forest: "#588157",
   white: "#FFF",
   black: "#000",
+  dust: "#e9ecef",
 };
 
 export const PALLETE = {

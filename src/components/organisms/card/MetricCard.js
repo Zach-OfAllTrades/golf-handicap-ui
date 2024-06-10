@@ -31,7 +31,7 @@ const MetricCard = ({ metric, trendMeasurement }) => {
     <Card sx={[cardStyle?.card, SHARED_STYLE.card]}>
       <CardHeader subheader={metric.title}></CardHeader>
       <CardContent sx={{ display: "flex", flexDirection: "column" }}>
-        <Typography sx={cardStyle?.textColor} variant="h1" alignSelf="center">
+        <Typography sx={cardStyle?.textColor} variant="h2" alignSelf="center">
           {metric.value.current}
         </Typography>
         {showTrend && (
