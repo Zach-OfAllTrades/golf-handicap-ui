@@ -11,15 +11,16 @@ import {
 } from "@mui/material";
 import { Remove, CalendarViewWeek } from "@mui/icons-material";
 import React, { useState } from "react";
-import LocalDatePicker from "../organisms/date/DatePicker";
-import { saveRounds } from "../../services/RoundService";
-import { getUserId } from "../../temp_redux/reduxMock";
+import LocalDatePicker from "../date/DatePicker";
+import { saveRounds } from "../../../services/RoundService";
+import { getUserId } from "../../../temp_redux/reduxMock";
 import dayjs from "dayjs";
-import { BUTTON_COLORS, FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../utils/general";
-import { useFetch } from "../../hooks/useFetch";
-import ScoreCard from "../dashboard/scores/Scorecard";
+import { BUTTON_COLORS, FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../../utils/general";
+import { useFetch } from "../../../hooks/useFetch";
+import ScoreCard from "../../dashboard/scores/Scorecard";
 import SelectCourse from "./SelectCourse";
 import AddCourse from "./AddCourse";
+import StandardButton, { BUTTON_VARIANTS } from "../../atoms/button/StandardButton";
 
 const AddScoreModal = ({ open, onClose }) => {
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.COURSES);
@@ -137,22 +138,20 @@ const AddScoreModal = ({ open, onClose }) => {
           <Grid item xs={6}>
             <Grid flex container spacing={1} sx={{ justifyContent: "right" }}>
               <Grid item>
-                <Button
-                  variant="outlined"
-                  onClick={onClose}
-                  sx={{ borderColor: BUTTON_COLORS.MAIN, color: BUTTON_COLORS.MAIN }}
+                <StandardButton
+                  handleClick={onClose}
+                  variant={BUTTON_VARIANTS.secondary}
                 >
                   Cancel
-                </Button>
+                </StandardButton>
               </Grid>
               <Grid item>
-                <Button
-                  variant="contained"
-                  onClick={onSubmit}
-                  sx={{ backgroundColor: BUTTON_COLORS.MAIN }}
+                <StandardButton
+                  handleClick={onSubmit}
+                  variant={BUTTON_VARIANTS.primary}
                 >
                   Submit
-                </Button>
+                </StandardButton>
               </Grid>
             </Grid>
           </Grid>

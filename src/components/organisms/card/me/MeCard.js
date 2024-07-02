@@ -7,8 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { getUserInfo } from "../../../temp_redux/reduxMock";
-import AddButton from "../../organisms/AddButton";
+import { getUserInfo } from "../../../../temp_redux/reduxMock";
+import AddRoundButton from "./AddRoundButton";
 import { ME_STYLE } from "./MeCard.style";
 
 const MeCard = ({ handleAddClick }) => {
@@ -28,7 +28,7 @@ const MeCard = ({ handleAddClick }) => {
         <Typography variant="h6">{user.location}</Typography>
       </CardContent>
       <CardActions sx={ME_STYLE.actions}>
-        <AddButton handleClick={handleAddClick} />
+        <AddRoundButton handleClick={handleAddClick} />
       </CardActions>
     </Card>
   );

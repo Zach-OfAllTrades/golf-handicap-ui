@@ -2,7 +2,7 @@ import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import React from "react";
 import { MAIN_METRIC_KEY } from "../../../../utils/general";
-import MetricTrend from "../trend/MetricTrend";
+import MetricTrend from "./trend/MetricTrend";
 import MetricBadge from "./MetricBadge";
 import { METRIC_CARD_STYLE, SHARED_STYLE } from "./MetricCard.style";
 
