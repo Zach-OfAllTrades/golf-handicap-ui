@@ -1,6 +1,6 @@
 import React from "react";
 import { METIRC_KEYS } from "../../../../utils/general";
-import Badge from "../../badge/Badge";
+import Badge from "../../../atoms/badge/Badge";
 import {
   AirlineStops,
   EmojiEvents,
@@ -19,7 +19,7 @@ const MetricBadge = ({ metrickey }) => {
     [LOW]: <EmojiEvents />,
   };
 
-  return <Badge content={METRIC_ICONS[metrickey]} />;
+  return <Badge>{METRIC_ICONS[metrickey]}</Badge>;
 };
 
 export default MetricBadge;

@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { grey } from "@mui/material/colors";
 
-const Badge = ({ content }) => {
+const Badge = ({ children }) => {
   return (
     <Box
       sx={{
@@ -15,7 +15,7 @@ const Badge = ({ content }) => {
         borderRadius: 2,
       }}
     >
-      {content}
+      {children}
     </Box>
   );
 };

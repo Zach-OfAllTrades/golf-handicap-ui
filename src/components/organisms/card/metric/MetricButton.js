@@ -1,7 +1,6 @@
 import { grey } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import React from "react";
-import { BUTTON_COLORS, PALLETE } from "../../../../utils/general";
 
 const MetricButton = ({ measurement, currentTrend, setTrend }) => {
   const { id, label } = measurement;

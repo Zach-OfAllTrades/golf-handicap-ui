@@ -1,5 +1,5 @@
-import { getColorPallete } from "../../../temp_redux/reduxMock";
-import { COLORS } from "../../../utils/general";
+import { getColorPallete } from "../../../../temp_redux/reduxMock";
+import { COLORS } from "../../../../utils/general";
 
 export const ALIGN_CENTER = {
   display: "flex",

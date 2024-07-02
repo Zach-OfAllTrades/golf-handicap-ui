@@ -1,4 +1,7 @@
-import { COLORS, PALLETE } from "../../../../utils/general";
+import { getColorPallete } from "../../../../temp_redux/reduxMock";
+import { COLORS } from "../../../../utils/general";
+
+const currentPallete = getColorPallete();
 
 export const BORDER = {
   main: {
@@ -9,7 +12,7 @@ export const BORDER = {
 export const METRIC_CARD_STYLE = {
   main: {
     card: {
-      background: PALLETE.light.gradient,
+      background: currentPallete.gradient,
     },
     textColor: { color: COLORS.white },
   },

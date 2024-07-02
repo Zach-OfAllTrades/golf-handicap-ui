@@ -1,11 +1,11 @@
 import { Container, Grid } from "@mui/material";
 import React, { useState } from "react";
-import AddScoreModal from "../components/modal/AddScoreModal";
+import AddScoreModal from "../components/organisms/modal/AddScoreModal";
 import ScoresTable from "../components/dashboard/scores/ScoresTable";
 import { FETCH_KEYS } from "../utils/general";
 import { useFetch } from "../hooks/useFetch";
 import MetricDeck from "../components/dashboard/metrics/MetricDeck";
-import MeCard from "../components/dashboard/me/MeCard";
+import MeCard from "../components/organisms/card/me/MeCard";
 import MetricContainer from "../components/dashboard/metrics/MetricContainer";
 
 const border = {
@@ -38,6 +38,9 @@ const Dashboard = () => {
               {data && <MetricContainer metrics={data} />}
             </Grid>
           </Grid>
+        </Grid>
+        <Grid item xs={3}>
+          <ScoresTable /> /*Temp until metric table */
         </Grid>
         <Grid item xs={9}>
           <ScoresTable />

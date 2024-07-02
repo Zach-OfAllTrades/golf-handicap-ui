@@ -1,6 +1,6 @@
 import { TrendingUp, TrendingDown } from "@mui/icons-material";
 import { Grid, Box, Typography } from "@mui/material";
-import { SHARED_STYLE } from "../metric/MetricCard.style";
+import { SHARED_STYLE } from "../MetricCard.style";
 
 const { flexRow } = SHARED_STYLE;
 
