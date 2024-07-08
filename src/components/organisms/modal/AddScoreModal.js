@@ -136,7 +136,7 @@ const AddScoreModal = ({ open, onClose }) => {
             </Button>
           </Grid>
           <Grid item xs={6}>
-            <Grid flex container spacing={1} sx={{ justifyContent: "right" }}>
+            <Grid flex container spacing={1} sx={{ justifyContent: "flex-end" }}>
               <Grid item>
                 <StandardButton
                   handleClick={onClose}

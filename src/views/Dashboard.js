@@ -7,6 +7,7 @@ import { useFetch } from "../hooks/useFetch";
 import MetricDeck from "../components/dashboard/metrics/MetricDeck";
 import MeCard from "../components/organisms/card/me/MeCard";
 import MetricContainer from "../components/dashboard/metrics/MetricContainer";
+import ScoreChart from "../components/organisms/chart/ScoreChart";
 
 const border = {
   border: "1px solid red",
@@ -36,6 +37,7 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={9}>
               {data && <MetricContainer metrics={data} />}
+              <ScoreChart/>
             </Grid>
           </Grid>
         </Grid>

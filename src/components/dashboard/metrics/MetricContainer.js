@@ -15,13 +15,13 @@ const MetricContainer = ({ metrics }) => {
   );
 
   return (
-    <Grid container sx={{ display: "flex", flexDirection: "column" }}>
-      <Grid sx={{ alignSelf: "end" }}>
+    <Grid flex container sx={{ flexDirection: "column" }}>
+      {/* <Grid sx={{ alignSelf: "end" }}> */}
         <MetricControls
           currentTrend={trendMeasurement}
           setTrendMeasurement={setTrendMeasurement}
         />
-      </Grid>
+      {/* </Grid> */}
       <MetricDeck metrics={metrics} trendMeasurement={trendMeasurement} />
     </Grid>
   );

@@ -8,7 +8,7 @@ const { mainBorder } = BORDER;
 
 const MetricControls = ({ currentTrend, setTrendMeasurement }) => {
   return (
-    <Grid container sx={{ display: "flex", flexDirection: "row" }}>
+    <Grid container sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
       {TREND_MEASURMENTS.map((measurement) => (
         <MetricButton
           measurement={measurement}
