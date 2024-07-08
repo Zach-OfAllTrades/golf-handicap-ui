@@ -11,6 +11,7 @@ import { useFetch } from "../../../hooks/useFetch";
 import { COLORS, FETCH_KEYS } from "../../../utils/general";
 
 const ScoresTable = () => {
+  // move to HOC to feed into score chart as well
   const { data, isLoading, isError } = useFetch(FETCH_KEYS.ROUNDS);
   if (isLoading) {
     return <></>; // TODO: Add loading skeleton
