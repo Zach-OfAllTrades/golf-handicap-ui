@@ -1,8 +1,8 @@
 import { Button, Grid, Select, MenuItem } from "@mui/material";
 import React from "react";
 import { TREND_MEASURMENTS } from "../../../utils/general";
-import MetricButton from "../../organisms/card/metric/MetricButton";
-import { BORDER } from "../../organisms/card/metric/MetricCard.style";
+import MetricButton from "../../../components/organisms/card/metric/MetricButton";
+import { BORDER } from "../../../components/organisms/card/metric/MetricCard.style";
 
 const { mainBorder } = BORDER;
 

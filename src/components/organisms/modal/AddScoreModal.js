@@ -17,7 +17,7 @@ import { getUserId } from "../../../temp_redux/reduxMock";
 import dayjs from "dayjs";
 import { BUTTON_COLORS, FETCH_KEYS, STANDARD_DATE_FORMAT } from "../../../utils/general";
 import { useFetch } from "../../../hooks/useFetch";
-import ScoreCard from "../../dashboard/scores/Scorecard";
+import ScoreCard from "../../../views/dashboard/scores/Scorecard";
 import SelectCourse from "./SelectCourse";
 import AddCourse from "./AddCourse";
 import StandardButton, { BUTTON_VARIANTS } from "../../atoms/button/StandardButton";
