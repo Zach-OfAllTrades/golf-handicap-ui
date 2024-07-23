@@ -1,4 +1,4 @@
-import Dashboard from "./views/Dashboard";
+import Dashboard from "./views/dashboard/Dashboard";
 
 function App() {
   return (

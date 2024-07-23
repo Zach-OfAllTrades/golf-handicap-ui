@@ -1,13 +1,13 @@
 import { Container, Grid } from "@mui/material";
 import React, { useState } from "react";
-import AddScoreModal from "../components/organisms/modal/AddScoreModal";
-import ScoresTable from "../components/dashboard/scores/ScoresTable";
-import { FETCH_KEYS } from "../utils/general";
-import { useFetch } from "../hooks/useFetch";
-import MetricDeck from "../components/dashboard/metrics/MetricDeck";
-import MeCard from "../components/organisms/card/me/MeCard";
-import MetricContainer from "../components/dashboard/metrics/MetricContainer";
-import ScoreChart from "../components/organisms/chart/ScoreChart";
+import AddScoreModal from "../../components/organisms/modal/AddScoreModal";
+import ScoresTable from "./scores/ScoresTable";
+import { FETCH_KEYS } from "../../utils/general";
+import { useFetch } from "../../hooks/useFetch";
+import MetricDeck from "./metrics/MetricDeck";
+import MeCard from "../../components/organisms/card/me/MeCard";
+import MetricContainer from "./metrics/MetricContainer";
+import ScoreChart from "../../components/organisms/chart/ScoreChart";
 
 const border = {
   border: "1px solid red",

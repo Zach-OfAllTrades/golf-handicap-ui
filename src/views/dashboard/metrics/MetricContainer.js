@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import MetricCard from "../../organisms/card/metric/MetricCard";
-import { BORDER } from "../../organisms/card/metric/MetricCard.style";
+import MetricCard from "../../../components/organisms/card/metric/MetricCard";
+import { BORDER } from "../../../components/organisms/card/metric/MetricCard.style";
 import MetricDeck from "./MetricDeck";
 import MetricControls from "./MetricControls";
 import { TREND_MEASURMENTS } from "../../../utils/general";
